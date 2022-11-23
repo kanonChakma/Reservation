@@ -18,9 +18,7 @@ function App() {
     return (
       <div>
         <NavBar />
-        <div style={{ display: "flex" }}>
           <Outlet />
-        </div>
       </div>
     );
   };

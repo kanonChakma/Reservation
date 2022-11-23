@@ -1,9 +1,10 @@
 import React from 'react'
+import "./NavBar.scss"
 
 const NavBar = () => {
   return (
     <div className="navbar">
-        <div className="navconainer">
+        <div className="navContainer">
             <span className="log">Booking Hotel</span>
             <div className="navItems">
                 <button className="navButton">Register</button>
