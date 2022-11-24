@@ -48,6 +48,25 @@ const Header = () => {
             </p>
             <button className="headerBtn">Sign in / Register</button>
        </div>
+       <div className="headerSearch">
+              <div className="headerSearchItem">
+                <FontAwesomeIcon icon={faBed} className="headerIcon" />
+                <input
+                  type="text"
+                  placeholder="Where are you going?"
+                  className="headerSearchInput"
+                />
+              </div>
+              <div className="headerSearchItem">
+                <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
+                <span className="headerSearchText">start to end</span>
+              </div>
+              
+              <div className="headerSearchItem">
+                <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
+                <span className="headerSearchText">start to end</span>
+              </div>
+       </div>
     </div>
   </div>
   )

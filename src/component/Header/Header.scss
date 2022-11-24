@@ -24,9 +24,6 @@
         border-radius: 20px;
        }
      }
-     .headerTitle{
-
-     }
      .headerDesc{
         margin: 20px 0px;
      }
@@ -37,6 +34,36 @@
         background-color:#0071c2;
         font-weight:500;
         color:white;
+     }
+     .headerSearch {
+      background-color: white;
+      border: 3px solid #febb02;
+      display: flex;
+      justify-content:space-between;
+      height:30px;
+      align-items:center;
+      padding: 20px 0px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: -25px;
+      width: 100%;
+      max-width: 1024px;
+      .headerSearchInput{
+         border: none;
+         outline: none;
+      }
+      .headerSearchItem {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         .headerIcon {
+            color: lightgray;
+          }
+         .headerSearchText {
+            color: lightgray;
+            cursor: pointer;
+          }
+       }
      }
     }
 }
