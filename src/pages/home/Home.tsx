@@ -1,6 +1,8 @@
 import React from "react";
 import Featured from "../../component/Featured/Featured";
+import FeaturedProperties from "../../component/FeaturedProperties/FeaturedProperties";
 import Header from "../../component/Header/Header";
+import PropertyList from "../../component/PropertyList/PropertyList";
 import "./Home.scss";
 
 const Home = () => {
@@ -9,6 +11,10 @@ const Home = () => {
       <Header type="home" />
       <div className="homeContainer">
         <Featured />
+        <h1 className="homeTitle">Browse by property type</h1>
+        <PropertyList />
+        <h1 className="homeTitle">Homes guests love</h1>
+        <FeaturedProperties />
       </div>
     </div>
   );
