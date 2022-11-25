@@ -90,6 +90,7 @@ const Header: FC<headerProps> = ({ type }) => {
               </p>
               <button className="headerBtn">Sign in / Register</button>
             </div>
+
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
