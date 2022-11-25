@@ -2,6 +2,7 @@ import React from "react";
 import Featured from "../../component/Featured/Featured";
 import FeaturedProperties from "../../component/FeaturedProperties/FeaturedProperties";
 import Header from "../../component/Header/Header";
+import MailList from "../../component/MailList/MailList";
 import PropertyList from "../../component/PropertyList/PropertyList";
 import "./Home.scss";
 
@@ -15,6 +16,7 @@ const Home = () => {
         <PropertyList />
         <h1 className="homeTitle">Homes guests love</h1>
         <FeaturedProperties />
+        <MailList />
       </div>
     </div>
   );
