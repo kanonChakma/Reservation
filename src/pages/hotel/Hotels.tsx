@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../../component/Header/Header";
 
-const Home = () => {
+const Hotels = () => {
   return (
     <div>
-      <Header type="home" />
+      <Header type="list" />
     </div>
   );
 };
 
-export default Home;
+export default Hotels;
