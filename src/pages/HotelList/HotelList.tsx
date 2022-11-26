@@ -3,7 +3,6 @@ import { useState } from "react";
 import { DateRange } from "react-date-range";
 import { useLocation } from "react-router-dom";
 import Header from "../../component/Header/Header";
-import NavBar from "../../component/NavBar/NavBar";
 import SearchItem from "../../component/SearchItem/SearchItem";
 import "./HotelList.scss";
 
@@ -16,7 +15,6 @@ const List = () => {
 
   return (
     <div>
-      <NavBar />
       <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">
