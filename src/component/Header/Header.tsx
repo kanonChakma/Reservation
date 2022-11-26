@@ -12,6 +12,7 @@ import React, { FC, useState } from "react";
 import { DateRange, Range } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import { useNavigate } from "react-router-dom";
 import "./Header.scss";
 
 interface selectType {
@@ -23,6 +24,7 @@ interface headerProps {
 
 const Header: FC<headerProps> = ({ type }) => {
   const [openDate, setOpenDate] = useState(false);
+  const [destination, setDestination] = useState("");
 
   const [date, setDate] = useState<Range[]>([
     {
@@ -39,7 +41,7 @@ const Header: FC<headerProps> = ({ type }) => {
     children: 0,
     room: 1,
   });
-
+  const navigate = useNavigate();
   const handleOption = (name: string, operation: string) => {
     setOptions((prev) => {
       return {
@@ -47,6 +49,10 @@ const Header: FC<headerProps> = ({ type }) => {
         [name]: operation === "i" ? options[name] + 1 : options[name] - 1,
       };
     });
+  };
+
+  const handleSearch = () => {
+    navigate("/hotels", { state: { destination, date, options } });
   };
 
   return (
@@ -98,6 +104,7 @@ const Header: FC<headerProps> = ({ type }) => {
                   type="text"
                   placeholder="Where are you going?"
                   className="headerSearchInput"
+                  onChange={(e) => setDestination(e.target.value)}
                 />
               </div>
               <div className="headerSearchItem">
@@ -206,7 +213,9 @@ const Header: FC<headerProps> = ({ type }) => {
                 )}
               </div>
               <div className="headerSearchItem">
-                <button className="headerBtn">search</button>
+                <button className="headerBtn" onClick={handleSearch}>
+                  search
+                </button>
               </div>
             </div>
           </>
